@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pyargos",
-    version="0.0.0",
+    version="0.0.1",
     author="Nuno Anselmo",
     author_email="pyargos@nunoanselmo.me",
     description="A Python library for easier interfacing with Argos",
