@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Dict, Optional
 
-from pyargos.argos import ArgosElement
+from pyargos.element import ArgosElement
 from pyargos.attribute_group import ArgosAttributeGroup, ArgosImage, ArgosAction
 
 

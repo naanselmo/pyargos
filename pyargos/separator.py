@@ -1,4 +1,4 @@
-from pyargos.argos import ArgosElement
+from pyargos.element import ArgosElement
 
 
 class ArgosSeparator(ArgosElement):

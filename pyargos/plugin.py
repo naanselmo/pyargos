@@ -1,14 +1,8 @@
-from abc import abstractmethod, ABC
 from typing import List
 
-from pyargos.attribute_element import ArgosButton
+from pyargos.element import ArgosElement
+from pyargos.attributed_element import ArgosButton
 from pyargos.separator import ArgosSeparator
-
-
-class ArgosElement(ABC):
-    @abstractmethod
-    def to_argos(self) -> str:
-        pass
 
 
 class ArgosPlugin:

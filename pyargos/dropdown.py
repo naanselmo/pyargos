@@ -1,7 +1,7 @@
 from typing import List
 
-from pyargos.argos import ArgosElement
-from pyargos.attribute_element import ArgosLine
+from pyargos.element import ArgosElement
+from pyargos.attributed_element import ArgosLine
 
 
 class ArgosDropdown(ArgosElement):
