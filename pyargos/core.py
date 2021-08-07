@@ -35,6 +35,8 @@ class ArgosAttributeGroup:
                 output[field.name] = value
             elif issubclass(field.type, ArgosAttributeGroup):
                 output |= value.attributes
+            else:
+                raise TypeError(f"type '{field.type.__name__}' unsupported by pyargos-to-argos type conversion")
 
         return output
 

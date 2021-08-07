@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from typing import Any, Optional
 
+import pytest
+
 from pyargos.core import ArgosAttributeGroup, ArgosSeparator, ArgosPlugin, ArgosAttributedElement, ArgosElement
 
 
@@ -60,6 +62,25 @@ def test_attributed_element_some():
             return "test content"
 
     assert TestAttributedElement(attribute_group=TestAttributeGroup()).to_argos() == "test content|test=true"
+
+
+def test_attributed_element_invalid():
+    @dataclass
+    class TestAttributeGroup(ArgosAttributeGroup):
+        test: bytes = b'exception'
+
+    class TestAttributedElement(ArgosAttributedElement):
+        def __init__(self, *, attribute_group: TestAttributeGroup) -> None:
+            super().__init__(attribute_group=attribute_group)
+
+        @property
+        def content(self) -> str:
+            return "test content"
+
+    with pytest.raises(TypeError) as exception_info:
+        TestAttributedElement(attribute_group=TestAttributeGroup()).to_argos()
+
+    assert "type 'bytes' unsupported by pyargos-to-argos type conversion" in str(exception_info.value)
 
 
 def test_plugin_empty():
