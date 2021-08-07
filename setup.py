@@ -27,9 +27,5 @@ setuptools.setup(
     package_data={'': ['LICENSE']},
     package_dir={"pyargos": "pyargos"},
     packages=["pyargos"],
-    tests_require=[
-        "pytest==6.2.4",
-        "pytest-cov==2.12.1"
-    ],
     python_requires=">=3.9"
 )
