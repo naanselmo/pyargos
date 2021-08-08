@@ -1,12 +1,11 @@
 from dataclasses import dataclass
-from typing import Optional
 
 from .line import ArgosLine, ArgosLineAttributes
 
 
 @dataclass
 class ArgosButtonAttributes(ArgosLineAttributes):
-    dropdown: Optional[bool] = None
+    dropdown: bool = None
 
 
 class ArgosButton(ArgosLine):

@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from typing import Optional
 
 from .core import ArgosAttributedElement, ArgosAttributeGroup
 from .utils import ArgosImage, ArgosAction
@@ -7,17 +6,17 @@ from .utils import ArgosImage, ArgosAction
 
 @dataclass
 class ArgosLineAttributes(ArgosAttributeGroup):
-    color: Optional[str] = None
-    icon: Optional[str] = None
-    image: Optional[ArgosImage] = None
-    length: Optional[int] = None
-    trim: Optional[bool] = None
-    alternate: Optional[bool] = None
-    emojize: Optional[bool] = None
-    ansi: Optional[bool] = None
-    markup: Optional[bool] = None
-    unescape: Optional[bool] = None
-    action: Optional[ArgosAction] = None
+    color: str = None
+    iconName: str = None
+    image: ArgosImage = None
+    length: int = None
+    trim: bool = None
+    alternate: bool = None
+    emojize: bool = None
+    ansi: bool = None
+    useMarkup: bool = None
+    unescape: bool = None
+    action: ArgosAction = None
 
 
 class ArgosLine(ArgosAttributedElement):
