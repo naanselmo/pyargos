@@ -7,8 +7,6 @@ on:
 
 jobs:
   pytest:
-    name: "Test with PyTest"
-
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master

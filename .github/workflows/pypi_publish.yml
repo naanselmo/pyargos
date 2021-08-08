@@ -7,8 +7,6 @@ on:
 
 jobs:
   build-and-publish:
-    name: "Build and Publish to PyPi"
-
     runs-on: ubuntu-latest
     steps:
       - name: Checks out master
