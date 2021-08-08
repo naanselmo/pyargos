@@ -19,7 +19,7 @@ Requirements
 Installation
 ------
 
-Installing this library is extremely easy as it is available over at PyPi, so you just need to `pip install it`:
+Installing this library is extremely easy as it is available over at PyPi, so you just need to `pip install` it:
 
 ```bash
 pip install pyargos
