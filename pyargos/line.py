@@ -20,7 +20,7 @@ class ArgosLineAttributes(ArgosAttributeGroup):
 
 
 class ArgosLine(ArgosAttributedElement):
-    def __init__(self, *, text: str, attribute_group: ArgosLineAttributes) -> None:
+    def __init__(self, *, text: str, attribute_group: ArgosLineAttributes = ArgosLineAttributes()) -> None:
         super().__init__(attribute_group=attribute_group)
         self.text = text
 

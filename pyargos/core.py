@@ -42,7 +42,7 @@ class ArgosAttributeGroup:
 
 
 class ArgosAttributedElement(ArgosElement, ABC):
-    def __init__(self, *, attribute_group: ArgosAttributeGroup) -> None:
+    def __init__(self, *, attribute_group: ArgosAttributeGroup = ArgosAttributeGroup()) -> None:
         super().__init__()
         self.attribute_group = attribute_group
 

@@ -9,5 +9,5 @@ class ArgosButtonAttributes(ArgosLineAttributes):
 
 
 class ArgosButton(ArgosLine):
-    def __init__(self, *, text: str, attribute_group: ArgosButtonAttributes) -> None:
+    def __init__(self, *, text: str, attribute_group: ArgosButtonAttributes = ArgosButtonAttributes()) -> None:
         super().__init__(text=text, attribute_group=attribute_group)
